@@ -13,7 +13,8 @@ export default function SinglePost() {
   const local = "http://localhost:5000"
   const PF = `${local}/images/`;
   console.log(`${PF},${local} "This is pf"`)
-  const { user } = useContext(Context);
+  const user = true
+
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
