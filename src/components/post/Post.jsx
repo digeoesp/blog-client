@@ -1,8 +1,9 @@
 import "./post.css";
 import { Link } from "react-router-dom";
+const { REACT_APP_SERVER_URL } = process.env;
 
 export default function Post({ post }) {
-  const PF = "https://digeo-blog-api.herokuapp.com/images/";
+  const PF = `${REACT_APP_SERVER_URL}/images/`;
 
   
 
