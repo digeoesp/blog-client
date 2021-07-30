@@ -1,12 +1,9 @@
 import "./post.css";
 import { Link } from "react-router-dom";
-const { REACT_APP_SERVER_URL } = process.env;
+
 
 export default function Post({ post }) {
-  const PF = `${REACT_APP_SERVER_URL}/images/`;
-
-  
-
+  const PF = "http://localhost:5000/images/"  
   return (
     <div className="post">
       {post.photo && <img className="postImg" src={PF + post.photo} alt="" />}

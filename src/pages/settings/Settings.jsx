@@ -5,14 +5,13 @@ import { Context } from "../../context/Context";
 import axios from "axios";
 
 export default function Settings() {
+  const PF = "http://localhost:5000/images/";
   const [file, setFile] = useState(null);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
-  const { REACT_APP_SERVER_URL } = process.env;
   const { user, dispatch } = useContext(Context);
-  const PF = `${REACT_APP_SERVER_URL}/images/`
 
   const handleSubmit = async (e) => {
     e.preventDefault();

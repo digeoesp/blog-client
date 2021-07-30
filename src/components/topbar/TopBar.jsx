@@ -2,12 +2,10 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./topbar.css";
-const { REACT_APP_SERVER_URL } = process.env;
-
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
-  const PF = `${REACT_APP_SERVER_URL}/images/`;
+  const PF = "http://localhost:5000/images/";
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
