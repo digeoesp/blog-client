@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./register.css";
+const { REACT_APP_SERVER_URL } = process.env;
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -13,7 +14,7 @@ export default function Register() {
     e.preventDefault();
     setError(false);
     try {
-      const res = await axios.post("/api/auth/register", {
+      const res = await axios.post(`${REACT_APP_SERVER_URL}/auth/register`, {
         username,
         email,
         password,
