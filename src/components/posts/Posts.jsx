@@ -4,7 +4,8 @@ import "./posts.css";
 export default function Posts({ posts }) {
   const arrOfPost = posts.map((p,index) => {
     return(
-    <Post post={p} key={index} />
+    <Post post={[p]} key={index} />
+    
   )})
 
   return (
