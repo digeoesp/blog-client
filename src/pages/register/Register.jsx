@@ -18,7 +18,9 @@ export default function Register() {
         username,
         email,
         password,
+        
       });
+      console.log(REACT_APP_SERVER_URL, "inside register")
       res.data && window.location.replace("/login");
     } catch (err) {
       setError(true);
