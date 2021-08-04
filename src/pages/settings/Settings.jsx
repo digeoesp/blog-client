@@ -3,9 +3,10 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
+const { REACT_APP_SERVER_URL } = process.env;
 
 export default function Settings() {
-  const PF = "http://localhost:5000/images/";
+  const PF = `${REACT_APP_SERVER_URL}/images/` 
   const [file, setFile] = useState(null);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");

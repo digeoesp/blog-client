@@ -4,9 +4,11 @@ import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./singlePost.css";
+const { REACT_APP_SERVER_URL } = process.env;
+
 
 export default function SinglePost() {
-  const PF = "http://localhost:5000/images/"
+  const PF = `${REACT_APP_SERVER_URL}/images/` 
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
